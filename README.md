@@ -1,4 +1,4 @@
-# Compiler Design Lab - Student ID: 230905290_D32
+# Compiler Design 
 
 A comprehensive collection of C programming assignments and practical implementations for a Compiler Design and Lab (CDL) course. This repository contains solutions to various lexical analysis, syntax analysis, and file processing tasks.
 
