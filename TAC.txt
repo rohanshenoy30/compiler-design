@@ -1,0 +1,142 @@
+if(a<b && b<c)
+{
+    a=5;
+}
+else if(a)
+{
+    a=100;
+}
+else
+{
+    a=a+1;
+}
+
+
+TAC]
+
+1. if a < b goto 3
+2. goto 7
+
+3. if b < c goto 5
+4. goto 7
+
+5. a = 5
+6. goto 13
+
+7. if a goto 9
+8. goto 11
+
+9. a = 100
+10. goto 13
+
+11. t1 = a + 1
+12. a = t1
+
+13. end
+
+
+
+===================
+TAC]
+
+x = a[i]
+y = b[j]
+a[i] = y
+b[j] = x
+
+
+CODE]
+
+MOV R0, i
+MUL R0, #4
+MOV R1, a[R0]
+MOV x, R1
+
+MOV R0, j
+MUL R0, #4
+MOV R1, b[R0]
+MOV y, R1
+
+MOV R0, i
+MUL R0, #4
+MOV R1, y
+MOV a[R0], R1
+
+MOV R0, j
+MUL R0, #4
+MOV R1, x
+MOV b[R0], R1
+
+========================
+i = 1;
+while(i <= 10)
+{
+    A[i] = 0;
+    i = i + 1;
+}
+
+TAC]
+
+1. i = 1
+
+2. if i <= 10 goto 4
+3. goto 9
+
+4. t1 = i * 4
+5. A[t1] = 0
+
+6. t2 = i + 1
+7. i = t2
+
+8. goto 2
+
+9. end
+
+===========================
+
+while (A < C and B > D) do
+
+    if A = 1 then
+        C = C + 1
+
+    else
+        while A <= D do
+            A = A + B
+
+
+
+TAC]
+
+L1:
+1. if A < C goto L10
+2. goto L3
+
+L10:
+3. if B > D goto L2
+4. goto L3
+
+
+L2:
+5. if A == 1 goto L4
+6. goto L5
+
+
+L4:
+7. t1 = C + 1
+8. C = t1
+9. goto L1
+
+
+L5:
+L7:
+10. if A <= D goto L8
+11. goto L1
+
+L8:
+12. t2 = A + B
+13. A = t2
+14. goto L7
+
+
+L3:
+15. end
